@@ -1,5 +1,6 @@
 ---
-
+	import "@styles/global.css";
+	import { Main } from "./main";
 ---
 
 <html lang="en">
@@ -11,6 +12,6 @@
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<Main client:only="react" />		
 	</body>
 </html>

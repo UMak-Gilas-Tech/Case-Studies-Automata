@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@layer base {
+  body {
+    font-family: 'Playfair Display', serif;
+    /* animated gradient background */
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4, #ff9a9e);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    color: #333;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    /* enhanced text shadow and weight */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    font-weight: 700;
+  }
+  a {
+    color: #d6336c;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  a:hover {
+    color: #ad2a51;
+    transform: scale(1.05);
+  }
+  /* style for the Pascal Triangle generator container */
+  .triangle-container {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    max-width: 800px;
+  }
+}
